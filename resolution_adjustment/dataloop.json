@@ -1,0 +1,96 @@
+{
+  "displayName": "[Image Utils] - Pillow",
+  "name": "image-utils-pillow",
+  "scope": "public",
+  "version": "0.0.1",
+  "attributes": {
+    "Provider": "Other",
+    "Category": "Pipeline",
+    "Pipeline Type": "Node",
+    "Node Type": "Image Utils"
+  },
+  "codebase": {
+    "type": "git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-pillow.git",
+    "gitTag": "0.0.1"
+  },
+  "components": {
+    "pipelineNodes": [
+      {
+        "invoke": {
+          "type": "function",
+          "namespace": "pillow_res_adjustment.pillow-res-adjustment.change_resolution"
+        },
+        "name": "pillow_res_adjustment",
+        "categories": ["images"],
+        "scope": "project"
+      }
+    ],
+    "modules": [
+      {
+        "name": "pillow-res-adjustment",
+        "entryPoint": "resolution_adjustment/resolution_adjustment.py",
+        "className": "ServiceRunner",
+        "initInputs": [],
+        "functions": [
+          {
+            "name": "change_resolution",
+            "description": "Changing image resolution",
+            "input": [
+              {
+                "type": "Item",
+                "name": "item"
+              },
+              {
+                "type": "String",
+                "name": "remote_path"
+              },
+              {
+                "type": "Integer",
+                "name": "new_width"
+              },
+              {
+                "type": "Integer",
+                "name": "new_height"
+              }
+            ],
+            "output": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "displayIcon": "item-outline",
+            "displayName": "Resolution adjustment"
+          }
+        ]
+      }
+    ],
+    "services": [
+      {
+        "name": "pillow_res_adjustment",
+        "moduleName": "pillow-res-adjustment",
+        "runtime": {
+          "podType": "regular-xs",
+          "runnerImage": "dataloopai/dtlpy-agent:cpu.py3.8.opencv4.7",
+          "numReplicas": 1,
+          "concurrency": 10,
+          "singleAgent": false,
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 1,
+            "maxReplicas": 2,
+            "queueLength": 10
+          },
+          "preemptible": false
+        },
+        "executionTimeout": 172800,
+        "drainTime": 600,
+        "onReset": "failed",
+        "runExecutionAsProcess": false,
+        "maxAttempts": 3,
+        "operation": "none"
+      }
+    ]
+  }
+}
