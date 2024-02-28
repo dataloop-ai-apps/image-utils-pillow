@@ -2,7 +2,7 @@
   "displayName": "Resolution adjustment",
   "name": "image-utils-pillow",
   "scope": "public",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "The app will change the resolution of an image using the Pillow library",
   "attributes": {
     "Provider": "Other",
@@ -13,7 +13,7 @@
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-pillow.git",
-    "gitTag": "0.0.5"
+    "gitTag": "0.0.6"
   },
   "components": {
     "pipelineNodes": [
