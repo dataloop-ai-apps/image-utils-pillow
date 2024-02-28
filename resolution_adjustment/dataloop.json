@@ -3,6 +3,7 @@
   "name": "image-utils-pillow",
   "scope": "public",
   "version": "0.0.1",
+  "description": "The app will change the resolution of an image using the Pillow library",
   "attributes": {
     "Provider": "Other",
     "Category": "Pipeline",
