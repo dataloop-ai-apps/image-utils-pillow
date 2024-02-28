@@ -9,14 +9,16 @@ class ServiceRunner(dl.BaseServiceRunner):
         pass
 
     @staticmethod
-    def change_resolution(item: dl.Item, remote_path, new_width=0, new_height=0):
-        if new_width == 0 or new_height == 0:
-            raise ValueError("Please provide new width and height values.")
+    def change_resolution(item: dl.Item, context: dl.Context):
+        node = context.node
+        width = node.metadata['customNodeConfig']['width']
+        height = node.metadata['customNodeConfig']['height']
+        remote_path = node.metadata['customNodeConfig']['remotePath']
         local_path = os.path.join(os.getcwd(), f'res_adjustment_{item.id}')
         os.makedirs(local_path, exist_ok=True)
         image_path = item.download(local_path=local_path)
         image = Image.open(image_path)
-        image = image.resize((new_width, new_height), 1)
+        image = image.resize((width, height), 1)
         output_path = os.path.join(local_path, f'resized_{item.name}')
         image.save(output_path)
         adjusted_image = item.dataset.items.upload(local_path=output_path,
