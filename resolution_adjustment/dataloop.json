@@ -20,7 +20,7 @@
       {
         "invoke": {
           "type": "function",
-          "namespace": "pillow_res_adjustment.pillow-res-adjustment.change_resolution"
+          "namespace": "pillow-res-adjustment.pillow-res-adjustment.change_resolution"
         },
         "name": "pillow_res_adjustment",
         "categories": ["images"],
@@ -147,7 +147,7 @@
     ],
     "services": [
       {
-        "name": "pillow_res_adjustment",
+        "name": "pillow-res-adjustment",
         "moduleName": "pillow-res-adjustment",
         "runtime": {
           "podType": "regular-xs",
