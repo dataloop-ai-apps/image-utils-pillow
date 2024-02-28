@@ -130,18 +130,6 @@
               {
                 "type": "Item",
                 "name": "item"
-              },
-              {
-                "type": "String",
-                "name": "remote_path"
-              },
-              {
-                "type": "Integer",
-                "name": "new_width"
-              },
-              {
-                "type": "Integer",
-                "name": "new_height"
               }
             ],
             "output": [
