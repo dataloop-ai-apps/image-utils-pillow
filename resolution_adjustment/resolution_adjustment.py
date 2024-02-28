@@ -13,7 +13,7 @@ class ServiceRunner(dl.BaseServiceRunner):
         node = context.node
         width = node.metadata['customNodeConfig']['width']
         height = node.metadata['customNodeConfig']['height']
-        remote_path = node.metadata['customNodeConfig']['remotePath']
+        remote_path = node.metadata['customNodeConfig']['remote_path']
         local_path = os.path.join(os.getcwd(), f'res_adjustment_{item.id}')
         os.makedirs(local_path, exist_ok=True)
         image_path = item.download(local_path=local_path)
