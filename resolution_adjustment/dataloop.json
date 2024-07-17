@@ -2,7 +2,7 @@
   "displayName": "Resolution adjustment",
   "name": "image-utils-pillow",
   "scope": "public",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "The app will change the resolution of an image using the Pillow library",
   "attributes": {
     "Provider": "Other",
