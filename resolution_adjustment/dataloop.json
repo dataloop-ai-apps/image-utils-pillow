@@ -8,7 +8,6 @@
     "Provider": "Other",
     "Category": "Application",
     "Media Type": ["Image"],
-    "Deployed By": "Dataloop",
     "Application Type": ["Pipeline Node"]
   },
   "codebase": {
