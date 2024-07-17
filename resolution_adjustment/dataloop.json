@@ -7,14 +7,14 @@
   "attributes": {
     "Provider": "Other",
     "Category": "Application",
-    "Application Type": [
-      "Pipeline Node"
-    ]
+    "Media Type": ["Image"],
+    "Deployed By": "Dataloop",
+    "Application Type": ["Pipeline Node"]
   },
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-pillow.git",
-    "gitTag": "0.0.7"
+    "gitTag": "0.0.6"
   },
   "components": {
     "pipelineNodes": [
@@ -24,9 +24,7 @@
           "namespace": "pillow-res-adjustment.pillow-res-adjustment.change_resolution"
         },
         "name": "pillow_res_adjustment",
-        "categories": [
-          "images"
-        ],
+        "categories": ["images"],
         "displayName": "Resolution adjustment",
         "description": "Changing image resolution",
         "scope": "node",
@@ -67,7 +65,7 @@
                 },
                 {
                   "type": "gte",
-                  "value": 1e-07,
+                  "value": 1e-7,
                   "effect": "error",
                   "errorMessage": "Width must be greater than 0"
                 }
@@ -91,7 +89,7 @@
                 },
                 {
                   "type": "gte",
-                  "value": 1e-07,
+                  "value": 1e-7,
                   "effect": "error",
                   "errorMessage": "Height must be greater than 0"
                 }
