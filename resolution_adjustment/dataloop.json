@@ -7,8 +7,12 @@
   "attributes": {
     "Provider": "Other",
     "Category": "Application",
-    "Media Type": ["Image"],
-    "Application Type": ["Pipeline Node"]
+    "Media Type": [
+      "Image"
+    ],
+    "Application Type": [
+      "Pipeline Node"
+    ]
   },
   "codebase": {
     "type": "git",
@@ -23,7 +27,9 @@
           "namespace": "pillow-res-adjustment.pillow-res-adjustment.change_resolution"
         },
         "name": "pillow_res_adjustment",
-        "categories": ["images"],
+        "categories": [
+          "image-utils"
+        ],
         "displayName": "Resolution adjustment",
         "description": "Changing image resolution",
         "scope": "node",
