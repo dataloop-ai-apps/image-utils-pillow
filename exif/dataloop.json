@@ -1,5 +1,5 @@
 {
-    "version": "0.0.13",
+    "version": "0.0.14",
     "name": "exif-extractor",
     "displayName": "Exif Extractor",
     "description": "Extracts EXIF data from images",
@@ -15,7 +15,7 @@
     "codebase": {
         "type": "git",
         "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-pillow.git",
-        "gitTag": "0.0.13"
+        "gitTag": "0.0.14"
       },
     "components": {
         "pipelineNodes": [
