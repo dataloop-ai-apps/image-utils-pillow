@@ -15,7 +15,7 @@
     "codebase": {
         "type": "git",
         "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-pillow.git",
-        "gitTag": "0.0.12"
+        "gitTag": "0.0.13"
       },
     "components": {
         "pipelineNodes": [
