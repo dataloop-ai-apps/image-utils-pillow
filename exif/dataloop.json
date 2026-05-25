@@ -90,7 +90,7 @@
                     "podType": "regular-m",
                     "numReplicas": 1,
                     "concurrency": 30,
-                    "runnerImage": "dataloop_runner-cpu/main:1.115.22.latest",
+                    "runnerImage": "dataloop_runner-cpu/main:1.123.3.latest",
                     "autoscaler": {
                         "type": "rabbitmq",
                         "queueLength": 10,
